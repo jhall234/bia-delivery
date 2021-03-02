@@ -1,0 +1,77 @@
+.bia-form input[type=text], input[type=tel], input[type=email], input[type=date], select, textarea {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+#bia-form-zip {
+    width: 15%;
+}
+
+#bia-form-num-in-house {
+    width: 15%;
+}
+  
+@media only screen and (max-width: 840px) {
+    .bia-form input[type=text], input[type=tel], input[type=email], input[type=date], select, textarea {
+        width: 100%;
+    }
+    
+    #bia-form-zip {
+        width: 35%;
+    }
+    
+    #bia-form-num-in-house {
+        width: 35%;
+    }
+}
+  
+  /* Style the submit button */
+  .bia-form input[type=submit] {
+    width: 100%;
+    background-color: #4c7aaf;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
+/* Add a background color to the submit button on mouse-over */
+.bia-form input[type=submit]:hover {
+background-color: #6384a8;
+}
+
+
+.bia-form input.error {
+    background-color: #ffc8c8d5;
+}
+
+label.error {
+    display: block;
+    margin-bottom: 10px;
+    font-size: small;
+    font-weight: bold;
+    color: #fa6d6d;
+}
+
+.bia-radio-inline {
+    display: inline-flex;
+    margin-right: 40px;
+}
+
+.bia-radio-inline input {
+    margin: auto;
+}
+
+.bia-radio-inline label {
+    margin-left: 5px;
+}
+
