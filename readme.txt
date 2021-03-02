@@ -13,7 +13,7 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This plugin provides a form for issuing food requests, as well as allowing wordpress admin users to schedule delivery times
 
 For backwards compatibility, if this section is missing, the full length of the short description will be used, and
 Markdown parsed.
