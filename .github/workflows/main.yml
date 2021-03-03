@@ -14,12 +14,16 @@ jobs:
       - name: Create SSH key
         run: |
           mkdir -p ~/.ssh/
-          echo "${{secrets.BIA_PRIVATE_KEY}}" > ~/.ssh/biaction_rsa
+          echo "$BIA_PRIVATE_KEY" > ~/.ssh/biaction_rsa
           sudo chmod 600 ~/.ssh/biaction_rsa
-          ssh-keyscan -H ${{secrets.BIA_SITE_URL}} > ~/.ssh/known_hosts
-          ssh -l ${{secrets.BIA_USER}} -i ~/.ssh/biaction_rsa ${{secrets.BIA_SITE_URL}}
+          ssh-keyscan -H $BIA_STIE_URL > ~/.ssh/known_hosts
+          ssh -l $BIA_USER -i ~/.ssh/biaction_rsa ${{secrets.BIA_SITE_URL}}
           cd ~/public_html/wp-content/plugins/bia-delivery
           git pull
           exit
         shell: bash
+        env:
+          BIA_PRIVATE_KEY: ${{secrets.BIA_PRIVATE_KEY}}
+          BIA_SITE_URL: ${{secrets.BIA_SITE_URL}}
+          BIA_USER: ${{secrets.BIA_USER}}
         
