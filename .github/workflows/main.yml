@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Login to BIA and sync plugin
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: SSH into BIA and git pull
         uses: appleboy/ssh-action@master
