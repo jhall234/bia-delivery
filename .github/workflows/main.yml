@@ -1,0 +1,25 @@
+name: Build & Deploy
+on:
+  # Trigger auto sync only for changes on main branch
+  push:
+    branches: [ main ]
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{secrets.BIA_PRIVATE_KEY}}" > ~/.ssh/biaction_rsa
+          sudo chmod 600 ~/.ssh/biaction_rsa
+          ssh-keyscan -H ${{secrets.BIA_SITE_URL}} > ~/.ssh/known_hosts
+          ssh -l ${{secrets.BIA_USER}} -i ~/.ssh/biaction_rsa ${{secrets.BIA_SITE_URL}}
+          cd ~/public_html/wp-content/plugins/bia-delivery
+          git pull
+          exit
+        shell: bash
+        
