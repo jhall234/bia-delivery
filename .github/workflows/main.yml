@@ -16,7 +16,7 @@ jobs:
         with:
           host: ${{ secrets.BIA_SITE_URL }}
           username: ${{ secrets.BIA_USER }}
-          password: ""
+          key: ${{ secrets.BIA_PRIVATE_KEY }}
           port: 22
           script: |            
             cd ~/public_html/wp-content/plugins/bia-delivery
