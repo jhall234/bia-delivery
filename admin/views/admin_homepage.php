@@ -27,5 +27,5 @@
     </table>
 </div>
 
-<div id="bia-details-modal" title="Request Details">    
+<div id="bia-details-modal" title="Request Details">
 </div>

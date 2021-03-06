@@ -1,6 +1,6 @@
 <div class="bia-form">
     <form id="bia-form" action="<?php echo esc_url(admin_url( 'admin-ajax.php' )) ?>">
-        <h3>Food Delivery Application</h3>   
+        <h3>Food Delivery Application</h3>
 
         <label for="bia-form-first-name">First Name</label>
         <input type="text" name="first_name" id="bia-form-first-name" placeholder="ex: John"/>
@@ -28,25 +28,25 @@
         <div>
             <label>Are You Over 65 or Disabled?</label>
             <div>
-                <div class='bia-radio-inline bia-radio-yes'>            
+                <div class='bia-radio-inline bia-radio-yes'>
                     <input type="radio" name="is_disabled" id="bia-form-yes" value="1">
                     <label for="bia-form-yes">Yes</label>
                 </div>
-                <div class='bia-radio-inline bia-radio-no'>            
+                <div class='bia-radio-inline bia-radio-no'>
                     <input type="radio" name="is_disabled" id="bia-form-no" value="0" checked>
                     <label for="bia-form-no">No</label>
                 </div>
             </div>
         </div>
-        
+
         <div>
             <label>Are you able to send & recieve texts</label>
             <div>
-                <div class='bia-radio-inline bia-radio-yes'>            
+                <div class='bia-radio-inline bia-radio-yes'>
                     <input type="radio" name="is_able_to_text" id="bia-form-is-able-to-text-yes" value="1">
                     <label for="bia-form-is-able-to-text-yes">Yes</label>
                 </div>
-                <div class='bia-radio-inline bia-radio-no'>            
+                <div class='bia-radio-inline bia-radio-no'>
                     <input type="radio" name="is_able_to_text" id="bia-form-is-able-to-text-no" value="0" checked>
                     <label for="bia-form-is-able-to-text-no">No</label>
                 </div>
@@ -55,9 +55,9 @@
 
         <label for="bia-form-special-instructions">Special Delivery Instructions</label>
         <textarea id="bia-form-special-instructions" name="special_instructions" placeholder="ex: Please ring doorbell" ></textarea>
-        
-        
-        
+
+
+
         <input class="button button-primary" id="bia-form-submit" type="submit" value="submit" />
         <?php wp_nonce_field('bia_delivery_nonce', 'bia_delivery_nonce') ?>
     </form>
