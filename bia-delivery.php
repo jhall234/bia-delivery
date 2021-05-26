@@ -328,11 +328,6 @@ function bia_delivery_ajax_bia_recieve_form(){
 
     $format = array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d', '%d', '%d', '%s', '%s');
 
-
-    if ($pd_district < 1){
-        $table_name = $wpdb->prefix.'bia_food_requests_out_of_bounds';
-    }
-
     $success = $wpdb->insert($table_name, $data, $format);
 
     if ($success) {
