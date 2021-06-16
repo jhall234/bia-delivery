@@ -81,3 +81,8 @@ label.error {
 .bia-radio-inline label {
 	margin-left: 5px;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(160, 160, 160);
+  opacity: 1; /* Firefox */
+}

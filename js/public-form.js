@@ -55,20 +55,41 @@
 			},
 			address: {
 				required: true,
-			},
+      },
+      apartment_num: {
+        required: false
+      },
+      city: {
+        required: true,
+      },
 			zip: {
 				required: true,
 				minlength: 5,
 				maxlength: 5,
 				digits: true,
-			},
+      },
+      county: {
+        required: true,
+      },
 			num_in_house: {
 				required: true,
 				digits: true,
-			},
+      },
+      is_disabled: {
+        required: true,
+      },
+      is_over_sixty: {
+        required: true,
+      },
 			monthly_income: {
 				required: true,
-			},
+      },
+      is_able_to_text: {
+        required: true
+      },
+      special_instructions: {
+        required: false
+      }
 		},
 		messages: {
 			first_name: "This field is required",
@@ -76,8 +97,9 @@
 			phone: "Please enter a valid phone",
 			email: "please enter a valid email",
 			address: "Enter a valid address",
-			zip: "Enter a valid zip",
-			num_in_house: "Please Enter a Number 1-8",
+      zip: "Enter a valid zip",
+      county: "Please choose an option",
+      num_in_house: "Please Enter a Number 1-8",
 		},
 		submitHandler: function (form) {
 			var params = $(form).serialize();
