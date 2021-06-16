@@ -1,4 +1,27 @@
 (function ($) {
+	new AutoNumeric("#bia-form-monthly-income", {
+		currencySymbol: "$",
+		roundingMethod: "S",
+		decimalPlaces: 0,
+		decimalPlacesRawValue: 0,
+		minimumValue: 0,
+	});
+	$.validator.addMethod(
+		"checkBirthday",
+		function (value, element) {
+			var userInput = new Date(value);
+			var today = new Date();
+			var eighteenYearsAgo = new Date();
+			var oneHundredYearsAgo = new Date();
+			eighteenYearsAgo.setFullYear(today.getFullYear() - 18);
+			oneHundredYearsAgo.setFullYear(today.getFullYear() - 100);
+			return (
+				this.optional(element) ||
+				(userInput < eighteenYearsAgo && userInput > oneHundredYearsAgo)
+			);
+		},
+		"Please enter a valid birthday"
+	);
 	$("#bia-form").validate({
 		rules: {
 			first_name: {
@@ -11,6 +34,7 @@
 			},
 			date_of_birth: {
 				required: true,
+				checkBirthday: true,
 			},
 			phone: {
 				required: true,
@@ -20,6 +44,7 @@
 				required: false,
 				email: true,
 				maxlength: 255,
+				minlength: 1,
 			},
 			address: {
 				required: true,
@@ -34,13 +59,15 @@
 				required: true,
 				digits: true,
 			},
+			monthly_income: {
+				required: true,
+			},
 		},
 		messages: {
 			first_name: "This field is required",
 			last_name: "This field is required",
-			date_of_birth: "This field is required",
-			phone: "Enter a valid phone",
-			email: "Enter a valid email",
+			phone: "Please enter a valid phone",
+			email: "please enter a valid email",
 			address: "Enter a valid address",
 			zip: "Enter a valid zip",
 			num_in_house: "Please Enter a Number 1-8",
@@ -55,7 +82,7 @@
 				processData: false,
 				success: function (response) {
 					if (response.success) {
-						alert("Your form has been submitted sucessfully!");
+						alert("Your form has been submitted successfully!");
 						location.reload();
 					} else {
 						alert(response.data);

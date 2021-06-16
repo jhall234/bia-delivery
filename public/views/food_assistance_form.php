@@ -23,21 +23,39 @@
         <label for="bia-form-zip">Zip Code</label>
         <input id="bia-form-zip" name="zip" type="text" pattern="[0-9]{5}" placeholder="ex: 80212">
 
-        <label for="bia-form-num-in-house">Number In Household</label>
+        <label for="bia-form-num-in-house">Number of People In Your Household</label>
         <input type="text" name="num_in_house" id="bia-form-num-in-house" placeholder="ex: 3">
+
         <div>
-            <label>Are You Over 65 or Disabled?</label>
+            <label>Is Someone In Your House Disabled?</label>
             <div>
                 <div class='bia-radio-inline bia-radio-yes'>
-                    <input type="radio" name="is_disabled" id="bia-form-yes" value="1">
-                    <label for="bia-form-yes">Yes</label>
+                    <input type="radio" name="is_disabled" id="bia-form-is-disabled-yes" value="1">
+                    <label for="bia-form-is-disabled-yes">Yes</label>
                 </div>
                 <div class='bia-radio-inline bia-radio-no'>
-                    <input type="radio" name="is_disabled" id="bia-form-no" value="0" checked>
-                    <label for="bia-form-no">No</label>
+                    <input type="radio" name="is_disabled" id="bia-form-is-disabled-no" value="0" checked>
+                    <label for="bia-form-is-disabled-no">No</label>
                 </div>
             </div>
         </div>
+
+        <div>
+            <label>Is Someone In Your House Over the Age of 60?</label>
+            <div>
+                <div class='bia-radio-inline bia-radio-yes'>
+                    <input type="radio" name="is_over_sixty" id="bia-form-is-over-sixty-yes" value="1">
+                    <label for="bia-form-is-over-sixty-yes">Yes</label>
+                </div>
+                <div class='bia-radio-inline bia-radio-no'>
+                    <input type="radio" name="is_over_sixty" id="bia-form-is-over-sixty-no" value="0" checked>
+                    <label for="bia-form-is-over-sixty-no">No</label>
+                </div>
+            </div>
+        </div>
+
+        <label for="bia-form-monthly-income">Estimated Monthly Income</label>
+        <input type="text" name="monthly_income" id="bia-form-monthly-income" placeholder="ex. $10000">
 
         <div>
             <label>Are you able to send & recieve texts</label>
