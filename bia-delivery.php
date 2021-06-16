@@ -99,6 +99,22 @@ function bia_delivery_register_public_scripts(){
         true
     );
 
+    wp_register_script(
+        'bia-delivery-jquery-validate-additional-methods',
+        'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js',
+        array('jquery'),
+        false,
+        true
+    );
+
+    wp_register_script(
+        'bia-delivery-autonumeric',
+        'https://cdn.jsdelivr.net/npm/autonumeric@4.1.0',
+        array(),
+        false,
+        true
+    );
+
     $file_path = 'js/public-form.js';
     wp_register_script(
         'bia-delivery-public-form',
@@ -127,7 +143,11 @@ add_action('wp_enqueue_scripts', 'bia_delivery_enqueue_public_styles');
 
 add_shortcode('bia_delivery_food_assistance_form', function(){
     wp_enqueue_script('bia-delivery-jquery-validate');
+    wp_enqueue_script('bia-delivery-jquery-validate-additional-methods');
+    wp_enqueue_script('bia-delivery-autonumeric');
+
     wp_enqueue_style('bia-delivery-public-form');
+
     wp_enqueue_script('bia-delivery-public-form');
     wp_localize_script( 'bia-delivery-public-form', 'settings', array(
         'ajaxurl' => admin_url( 'admin-ajax.php' )
