@@ -1,11 +1,17 @@
 (function ($) {
-	new AutoNumeric("#bia-form-monthly-income", {
+
+  $("#bia-form-phone").usPhoneFormat({
+    format: 'xxx-xxx-xxxx'
+  })
+
+  new AutoNumeric("#bia-form-monthly-income", {
 		currencySymbol: "$",
 		roundingMethod: "S",
 		decimalPlaces: 0,
 		decimalPlacesRawValue: 0,
 		minimumValue: 0,
-	});
+  });
+
 	$.validator.addMethod(
 		"checkBirthday",
 		function (value, element) {
@@ -38,7 +44,8 @@
 			},
 			phone: {
 				required: true,
-				minlength: 10,
+        minlength: 10,
+        phoneUS: true,
 			},
 			email: {
 				required: false,

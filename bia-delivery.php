@@ -92,6 +92,14 @@ function bia_delivery_initialize_database(){
 function bia_delivery_register_public_scripts(){
 
     wp_register_script(
+        'bia-delivery-jquery-phone-number-mask',
+        'https://unpkg.com/jquery-input-mask-phone-number@1.0.14/dist/jquery-input-mask-phone-number.js',
+        array('jquery'),
+        false,
+        true
+    );
+
+    wp_register_script(
         'bia-delivery-jquery-validate',
         'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js',
         array('jquery'),
@@ -142,6 +150,7 @@ function bia_delivery_enqueue_public_styles(){
 add_action('wp_enqueue_scripts', 'bia_delivery_enqueue_public_styles');
 
 add_shortcode('bia_delivery_food_assistance_form', function(){
+    wp_enqueue_script('bia-delivery-jquery-phone-number-mask');
     wp_enqueue_script('bia-delivery-jquery-validate');
     wp_enqueue_script('bia-delivery-jquery-validate-additional-methods');
     wp_enqueue_script('bia-delivery-autonumeric');
