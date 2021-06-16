@@ -39,22 +39,52 @@
           <option value="UNKNOWN">Option Not Listed / I Don't Know</option>
         </select>
 
+        <br>
+
         <label>Which category best describes you? Please select all that apply:</label>
         <div id="bia-form-race-error"></div>
-        <ul>
-          <li><input type="checkbox" name="race" value="AMERICAN_INDIAN">American Indian or Alaskan</input></li>
-          <li><input type="checkbox" name="race" value="BLACK">Black or African American</input></li>
-          <li><input type="checkbox" name="race" value="HISPANIC">Hispanic, Latino or Spanish Origin</input></li>
-          <li><input type="checkbox" name="race" value="MIDDLE_EASTERN">Middle Eastern or North African</input></li>
-          <li><input type="checkbox" name="race" value="PACIFIC_ISLANDER">Native Hawaiian or Other Pacific Islander</input></li>
-          <li><input type="checkbox" name="race" value="ASIAN">Asian</input></li>
-          <li><input type="checkbox" name="race" value="WHITE">White</input></li>
-          <li><input type="checkbox" name="race" value="WHITE_HISPANIC">White Hispanic</input></li>
-          <li><input type="checkbox" name="race" value="NOT_LISTED">Other Race Not Listed</input></li>
-          <li><input type="checkbox" name="race" value="UNKNOWN">I Prefer Not to Say</input></li>
-
+        <ul class="checkbox-grid">
+          <li>
+            <input type="checkbox" name="race" value="AMERICAN_INDIAN"></input>
+            <p>American Indian or Alaskan</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="BLACK"></input>
+            <p>Black or African American</p>
+          </li>
+            <li>
+            <input type="checkbox" name="race" value="HISPANIC"></input>
+            <p>Hispanic, Latino or Spanish Origin</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="MIDDLE_EASTERN"></input>
+            <p>Middle Eastern or North African</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="PACIFIC_ISLANDER"></input>
+            <p>Native Hawaiian or Other Pacific Islander</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="ASIAN"></input>
+            <p>Asian</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="WHITE"></input>
+            <p>White</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="WHITE_HISPANIC"></input>
+            <p>White Hispanic</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="NOT_LISTED"></input>
+            <p>Other Race Not Listed</p>
+          </li>
+          <li>
+            <input type="checkbox" name="race" value="UNKNOWN"></input>
+            <p>I Prefer Not to Say</p>
+          </li>
         </ul>
-
 
         <label for="bia-form-num-in-house">Number of People In Your Household</label>
         <input type="text" name="num_in_house" id="bia-form-num-in-house" placeholder="ex: 3">

@@ -82,7 +82,33 @@ label.error {
 	margin-left: 5px;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(160, 160, 160);
-  opacity: 1; /* Firefox */
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgb(160, 160, 160);
+	opacity: 1; /* Firefox */
+}
+
+.checkbox-grid li {
+	display: flex;
+	float: left;
+	width: 50%;
+	height: 70px;
+}
+
+.checkbox-grid li p {
+	padding-left: 5px;
+}
+
+.checkbox-grid li input[type="checkbox"] {
+	width: 25px;
+	height: 25px;
+	flex-shrink: 0;
+	margin: 4px 0px;
+}
+
+select,
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"]{
+	/* border: none !important; */
+  border-radius: 4px !important;
+  border-width: 0 !important;
 }
