@@ -20,8 +20,24 @@
         <label for="bia-form-address">Street Address</label>
         <input type="text" id="bia-form-address" name="address" placeholder="ex: 1234 W Denver Rd">
 
+        <label for="bia-form-apartment-num">Apartment Number</label>
+        <input type="text" id="bia-form-apartment-num" name="apartment_num" placeholder="ex: 4A">
+
+        <label for="bia-form-city">City</label>
+        <input type="text" id="bia-form-city" name="city" placeholder="ex: Lakewood">
+
         <label for="bia-form-zip">Zip Code</label>
         <input id="bia-form-zip" name="zip" type="text" pattern="[0-9]{5}" placeholder="ex: 80212">
+
+        <label for="bia-form-county">County</label>
+        <select id="bia-form-county" name="county">
+          <option value="" selected disabled hidden>--Please Select--</option>
+          <option value="ADAMS">Adams</option>
+          <option value="ARAPAHOE">Arapahoe</option>
+          <option value="DENVER">Denver</option>
+          <option value="JEFFERSON">Jefferson</option>
+          <option value="UNKNOWN">Option Not Listed / I Don't Know</option>
+        </select>
 
         <label for="bia-form-num-in-house">Number of People In Your Household</label>
         <input type="text" name="num_in_house" id="bia-form-num-in-house" placeholder="ex: 3">
