@@ -39,6 +39,23 @@
           <option value="UNKNOWN">Option Not Listed / I Don't Know</option>
         </select>
 
+        <label>Which category best describes you? Please select all that apply:</label>
+        <div id="bia-form-race-error"></div>
+        <ul>
+          <li><input type="checkbox" name="race" value="AMERICAN_INDIAN">American Indian or Alaskan</input></li>
+          <li><input type="checkbox" name="race" value="BLACK">Black or African American</input></li>
+          <li><input type="checkbox" name="race" value="HISPANIC">Hispanic, Latino or Spanish Origin</input></li>
+          <li><input type="checkbox" name="race" value="MIDDLE_EASTERN">Middle Eastern or North African</input></li>
+          <li><input type="checkbox" name="race" value="PACIFIC_ISLANDER">Native Hawaiian or Other Pacific Islander</input></li>
+          <li><input type="checkbox" name="race" value="ASIAN">Asian</input></li>
+          <li><input type="checkbox" name="race" value="WHITE">White</input></li>
+          <li><input type="checkbox" name="race" value="WHITE_HISPANIC">White Hispanic</input></li>
+          <li><input type="checkbox" name="race" value="NOT_LISTED">Other Race Not Listed</input></li>
+          <li><input type="checkbox" name="race" value="UNKNOWN">I Prefer Not to Say</input></li>
+
+        </ul>
+
+
         <label for="bia-form-num-in-house">Number of People In Your Household</label>
         <input type="text" name="num_in_house" id="bia-form-num-in-house" placeholder="ex: 3">
 
@@ -89,8 +106,6 @@
 
         <label for="bia-form-special-instructions">Special Delivery Instructions</label>
         <textarea id="bia-form-special-instructions" name="special_instructions" placeholder="ex: Please ring doorbell" ></textarea>
-
-
 
         <input class="button button-primary" id="bia-form-submit" type="submit" value="submit" />
         <?php wp_nonce_field('bia_delivery_nonce', 'bia_delivery_nonce') ?>
