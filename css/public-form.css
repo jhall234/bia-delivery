@@ -14,7 +14,7 @@ textarea {
 }
 
 #bia-form-zip {
-	width: 15%;
+	width: 20%;
 }
 
 #bia-form-num-in-house {
@@ -29,10 +29,6 @@ textarea {
 	select,
 	textarea {
 		width: 100%;
-	}
-
-	#bia-form-zip {
-		width: 35%;
 	}
 
 	#bia-form-num-in-house {
@@ -111,4 +107,8 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="date"], 
 	/* border: none !important; */
   border-radius: 4px !important;
   border-width: 0 !important;
+}
+
+.note-text {
+  color: brown;
 }

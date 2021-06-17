@@ -25,7 +25,7 @@
 				(userInput < eighteenYearsAgo && userInput > oneHundredYearsAgo)
 			);
 		},
-		"Please enter a valid birthday"
+		"Please enter the birthday of the oldest in your household"
 	);
 	$("#bia-form").validate({
 		rules: {
@@ -70,7 +70,7 @@
 			county: {
 				required: true,
 			},
-			race: {
+			"race[]": {
 				required: true,
 			},
 			num_in_house: {
@@ -141,11 +141,16 @@
 				processData: false,
 				success: function (response) {
 					if (response.success) {
-						alert("Your form has been submitted successfully!");
-						location.reload();
+						alert("Your form has been submitted successfully! Redirecting to contact us page...");
+						location.replace(
+							window.location.protocol +
+								"//" +
+								window.location.host +
+								"/contact"
+						);
 					} else {
 						alert(response.data);
-						location.reload();
+            location.reload();
 					}
 				},
 			});
