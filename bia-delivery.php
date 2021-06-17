@@ -35,7 +35,7 @@ function bia_delivery_initialize_database(){
         sign_up_date datetime NOT NULL,
         num_in_house tinyint NOT NULL,
         is_disabled boolean NOT NULL DEFAULT FALSE,
-        is_over_sixty boolean NOT NULL DEFAULT FALSE,
+        is_over_sixty boolean,
         is_able_to_text boolean NOT NULL DEFAULT FALSE,
         monthly_income mediumint unsigned NOT NULL DEFAULT 0,
         special_instructions text,
