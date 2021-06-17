@@ -8,19 +8,19 @@
         <label for="bia-form-last-name">Last Name</label>
         <input type="text" id="bia-form-last-name" name="last_name" placeholder="ex: Doe"/>
 
-        <label for="bia-form-date-of-birth">Date of Birth</label>
+        <label for="bia-form-date-of-birth">Date of Birth (of oldest in the household)</label>
         <input id="bia-form-date-of-birth" name="date_of_birth" type="date">
 
         <label for="bia-form-phone">Phone Number</label>
         <input id="bia-form-phone" name="phone" type="tel" placeholder="ex: 303-123-1234">
 
-        <label for="bia-form-email">Email</label>
+        <label for="bia-form-email">Email (Optional)</label>
         <input id="bia-form-email" name="email" type="email" placeholder="ex: example@example.com">
 
         <label for="bia-form-address">Street Address</label>
         <input type="text" id="bia-form-address" name="address" placeholder="ex: 1234 W Denver Rd">
 
-        <label for="bia-form-apartment-num">Apartment Number</label>
+        <label for="bia-form-apartment-num">Apartment / Lot Number</label>
         <input type="text" id="bia-form-apartment-num" name="apartment_num" placeholder="ex: 4A">
 
         <label for="bia-form-city">City</label>
@@ -28,6 +28,7 @@
 
         <label for="bia-form-zip">Zip Code</label>
         <input id="bia-form-zip" name="zip" type="text" pattern="[0-9]{5}" placeholder="ex: 80212">
+
 
         <label for="bia-form-county">County</label>
         <select id="bia-form-county" name="county">
@@ -38,6 +39,15 @@
           <option value="JEFFERSON">Jefferson</option>
           <option value="UNKNOWN">Option Not Listed / I Don't Know</option>
         </select>
+        <p class="note-text"> NOTE: We currently only deliver in these counties:
+          <ul>
+            <li>Adams</li>
+            <li>Arapahoe</li>
+            <li>Denver</li>
+            <li>Jefferson</li>
+          </ul>
+
+        </p>
 
         <br>
 
@@ -45,43 +55,43 @@
         <div id="bia-form-race-error"></div>
         <ul class="checkbox-grid">
           <li>
-            <input type="checkbox" name="race" value="AMERICAN_INDIAN"></input>
+            <input type="checkbox" name="race[]" value="american_indian"></input>
             <p>American Indian or Alaskan</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="BLACK"></input>
+            <input type="checkbox" name="race[]" value="black"></input>
             <p>Black or African American</p>
           </li>
             <li>
-            <input type="checkbox" name="race" value="HISPANIC"></input>
+            <input type="checkbox" name="race[]" value="hispanic"></input>
             <p>Hispanic, Latino or Spanish Origin</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="MIDDLE_EASTERN"></input>
+            <input type="checkbox" name="race[]" value="middle_eastern"></input>
             <p>Middle Eastern or North African</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="PACIFIC_ISLANDER"></input>
+            <input type="checkbox" name="race[]" value="pacific_islander"></input>
             <p>Native Hawaiian or Other Pacific Islander</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="ASIAN"></input>
+            <input type="checkbox" name="race[]" value="asian"></input>
             <p>Asian</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="WHITE"></input>
+            <input type="checkbox" name="race[]" value="white"></input>
             <p>White</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="WHITE_HISPANIC"></input>
+            <input type="checkbox" name="race[]" value="white_hispanic"></input>
             <p>White Hispanic</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="NOT_LISTED"></input>
+            <input type="checkbox" name="race[]" value="not_listed"></input>
             <p>Other Race Not Listed</p>
           </li>
           <li>
-            <input type="checkbox" name="race" value="UNKNOWN"></input>
+            <input type="checkbox" name="race[]" value="unknown"></input>
             <p>I Prefer Not to Say</p>
           </li>
         </ul>
@@ -90,7 +100,7 @@
         <input type="text" name="num_in_house" id="bia-form-num-in-house" placeholder="ex: 3">
 
         <div>
-            <label>Is Someone In Your House Disabled?</label>
+            <label>Is Someone In Your Home Living with a Disability?</label>
             <div>
                 <div class='bia-radio-inline bia-radio-yes'>
                     <input type="radio" name="is_disabled" id="bia-form-is-disabled-yes" value="1">
