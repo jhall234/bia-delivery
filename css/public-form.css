@@ -14,7 +14,7 @@ textarea {
 }
 
 #bia-form-zip {
-	width: 15%;
+	width: 20%;
 }
 
 #bia-form-num-in-house {
@@ -29,10 +29,6 @@ textarea {
 	select,
 	textarea {
 		width: 100%;
-	}
-
-	#bia-form-zip {
-		width: 35%;
 	}
 
 	#bia-form-num-in-house {
@@ -80,4 +76,39 @@ label.error {
 
 .bia-radio-inline label {
 	margin-left: 5px;
+}
+
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgb(160, 160, 160);
+	opacity: 1; /* Firefox */
+}
+
+.checkbox-grid li {
+	display: flex;
+	float: left;
+	width: 50%;
+	height: 70px;
+}
+
+.checkbox-grid li p {
+	padding-left: 5px;
+}
+
+.checkbox-grid li input[type="checkbox"] {
+	width: 25px;
+	height: 25px;
+	flex-shrink: 0;
+	margin: 4px 0px;
+}
+
+select,
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea {
+	/* border: none !important; */
+  border-radius: 4px !important;
+  border-width: 0 !important;
+}
+
+.note-text {
+  color: brown;
 }
